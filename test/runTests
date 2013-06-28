@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd testCases/compliance/
+./complianceTests
+cd ../policyMatching/
+./policyMatchingTests
+

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Unit Test Cases"
+for file in ./unitTest/*.hs; do
+	# echo $file
+	ghc -i.:../../:../../../ -package-name HUnit $file -e main
+done;
+
+echo "Integration Test Cases"
+for file in ./integrationTest/*.hs; do
+	# echo $file
+	ghc -i.:../../:../../../ -package-name HUnit $file -e main
+done;

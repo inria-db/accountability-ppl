@@ -1,0 +1,187 @@
+ 121112 15:53:48	   85 Query	select piilogged0_.id as id235_, date as date235_, piilogged0_.event_id as event7_235_, piilogged0_.owner as owner235_, piilogged0_.piiAttributeName as piiAttri4_235_, piilogged0_.piiAttributeValue as piiAttri5_235_, piilogged0_.piiUid as piiUid235_ from piiH piilogged0_ where piilogged0_.owner=1 order by piilogged0_.piiUid, date ASC
+121112 15:54:14	   85 Query	select piiuniquei0_.id as id228_, piiuniquei0_.uniqueId as uniqueId228_ from piiuniqueid piiuniquei0_ cross join PIITYPE piitype1_ where piiuniquei0_.id=piitype1_.HJID and piiuniquei0_.uniqueId=11352731546631961 and piitype1_.OWNER=1
+		   85 Query	select oeestatus0_.id as id227_, oeestatus0_.action_HJID as action4_227_, oeestatus0_.piiUniqueId_id as piiUniqu5_227_, oeestatus0_.trigger_HJID as trigger6_227_, oeestatus0_.triggerName as triggerN2_227_, oeestatus0_.triggeredOnce as triggere3_227_ from OEEStatus oeestatus0_ where oeestatus0_.piiUniqueId_id=1 and oeestatus0_.triggerName='{http://www.primelife.eu/ppl/obligation}TriggerPersonalDataDeleted'
+		   85 Query	select piiuniquei0_.id as id228_, piiuniquei0_.uniqueId as uniqueId228_ from piiuniqueid piiuniquei0_
+		   85 Query	SET autocommit=0
+		   85 Query	insert into EventH_ values ( )
+		   85 Query	insert into EventHDelete (id) values (7)
+		   85 Query	insert into piiH (date, event_id, owner, piiAttributeName, piiAttributeValue, piiUid) values (null, 7, 1, null, null, 11352731546631961)
+		   85 Query	commit
+		   85 Query	SET autocommit=1
+		   85 Query	select eventlogge0_.id as id229_0_ from EventHDelete eventlogge0_ inner join EventH_ eventlogge0_1_ on eventlogge0_.id=eventlogge0_1_.id where eventlogge0_.id=7
+		   85 Query	select piilogged0_.id as id235_1_, date as date235_1_, piilogged0_.event_id as event7_235_1_, piilogged0_.owner as owner235_1_, piilogged0_.piiAttributeName as piiAttri4_235_1_, piilogged0_.piiAttributeValue as piiAttri5_235_1_, piilogged0_.piiUid as piiUid235_1_, eventlogge1_.id as id229_0_, eventlogge1_3_.subject as subject232_0_, eventlogge1_5_.actionPerformed as actionPe1_234_0_, eventlogge1_5_.purpose as purpose234_0_, case when eventlogge1_1_.id is not null then 1 when eventlogge1_2_.id is not null then 2 when eventlogge1_3_.id is not null then 3 when eventlogge1_4_.id is not null then 4 when eventlogge1_5_.id is not null then 5 when eventlogge1_.id is not null then 0 end as clazz_0_ from piiH piilogged0_ left outer join EventH_ eventlogge1_ on piilogged0_.event_id=eventlogge1_.id left outer join EventHUpdate eventlogge1_1_ on eventlogge1_.id=eventlogge1_1_.id left outer join EventHCreate eventlogge1_2_ on eventlogge1_.id=eventlogge1_2_.id left outer join EventHDownstream eventlogge1_3_ on eventlogge1_.id=eventlogge1_3_.id left outer join EventHDelete eventlogge1_4_ on eventlogge1_.id=eventlogge1_4_.id left outer join EventHAccess eventlogge1_5_ on eventlogge1_.id=eventlogge1_5_.id where piilogged0_.id=7
+		   85 Query	select piiuniquei0_.id as id228_, piiuniquei0_.uniqueId as uniqueId228_ from piiuniqueid piiuniquei0_
+		   85 Query	select oeestatus0_.id as id227_, oeestatus0_.action_HJID as action4_227_, oeestatus0_.piiUniqueId_id as piiUniqu5_227_, oeestatus0_.trigger_HJID as trigger6_227_, oeestatus0_.triggerName as triggerN2_227_, oeestatus0_.triggeredOnce as triggere3_227_ from OEEStatus oeestatus0_ where oeestatus0_.piiUniqueId_id=1
+		   85 Query	SET autocommit=0
+		   85 Query	delete from OEEStatus where id=1
+		   85 Query	commit
+		   85 Query	SET autocommit=1
+		   85 Query	SET autocommit=0
+		   85 Query	delete from OEEStatus where id=2
+		   85 Query	commit
+		   85 Query	SET autocommit=1
+		   85 Query	select piiuniquei0_.id as id228_, piiuniquei0_.uniqueId as uniqueId228_ from piiuniqueid piiuniquei0_
+		   85 Query	SET autocommit=0
+		   85 Query	update PIITYPEPOLICYSETORPOLICYITEM set POLICYSETORPOLICYITEMS_PIITY_0=null where POLICYSETORPOLICYITEMS_PIITY_0=1
+		   85 Query	update AUTHORIZATIONSSETTYPEAUTHORI_0 set AUTHORIZATIONITEMS_AUTHORIZA_0=null where AUTHORIZATIONITEMS_AUTHORIZA_0=1
+		   85 Query	update AUTHORIZATIONTYPEANYITEM set ANYITEMS_AUTHORIZATIONTYPE_H_0=null where ANYITEMS_AUTHORIZATIONTYPE_H_0=1
+		   85 Query	update OBLIGATION set OBLIGATION_OBLIGATIONSSET_0__0=null where OBLIGATION_OBLIGATIONSSET_0__0=1
+		   85 Query	update TRIGGERSSETTRIGGERITEM set TRIGGERITEMS_TRIGGERSSET_HJID=null where TRIGGERITEMS_TRIGGERSSET_HJID=1
+		   85 Query	update TRIGGERSSETTRIGGERITEM set TRIGGERITEMS_TRIGGERSSET_HJID=null where TRIGGERITEMS_TRIGGERSSET_HJID=2
+		   85 Query	delete from PIITYPEPOLICYSETORPOLICYITEM where HJID=1
+		   85 Query	delete from POLICYTYPE_0 where HJID=1
+		   85 Query	delete from POLICYTYPE where HJID=1
+		   85 Query	delete from STICKYPOLICYTYPE where HJID=1
+		   85 Query	delete from COMMONDHPSPTYPE where HJID=1
+		   85 Query	delete from AUTHORIZATIONSSETTYPEAUTHORI_0 where HJID=1
+		   85 Query	delete from AUTHORIZATIONTYPEANYITEM where HJID=1
+		   85 Query	delete from AUTHZDOWNSTREAMUSAGE where HJID=1
+		   85 Query	delete from AUTHORIZATIONTYPE where HJID=1
+		   85 Query	delete from AUTHORIZATIONSSETTYPE where HJID=1
+		   85 Query	delete from OBLIGATION where HJID=1
+		   85 Query	delete from ACTIONDELETEPERSONALDATA where HJID=1
+		   85 Query	delete from ACTION_ where HJID=1
+		   85 Query	delete from TRIGGERSSETTRIGGERITEM where HJID=1
+		   85 Query	delete from TRIGGERATTIME where HJID=1
+		   85 Query	delete from TRIGGER_ where HJID=1
+		   85 Query	delete from DURATION where HJID=1
+		   85 Query	delete from DATEANDTIME where HJID=1
+		   85 Query	delete from TRIGGERSSET where HJID=1
+		   85 Query	delete from OBLIGATION where HJID=2
+		   85 Query	delete from ACTIONNOTIFYDATASUBJECT where HJID=2
+		   85 Query	delete from ACTION_ where HJID=2
+		   85 Query	delete from TRIGGERSSETTRIGGERITEM where HJID=2
+		   85 Query	delete from TRIGGERPERSONALDATASENT where HJID=2
+		   85 Query	delete from TRIGGER_ where HJID=2
+		   85 Query	delete from DURATION where HJID=2
+		   85 Query	delete from TRIGGERSSET where HJID=2
+		   85 Query	delete from OBLIGATIONSSET_0 where HJID=1
+		   85 Query	delete from PIITYPE where HJID=1
+		   85 Query	delete from piiuniqueid where id=1
+		   85 Query	commit
+		   85 Query	SET autocommit=1
+		   85 Query	select piilogged0_.id as id235_, date as date235_, piilogged0_.event_id as event7_235_, piilogged0_.owner as owner235_, piilogged0_.piiAttributeName as piiAttri4_235_, piilogged0_.piiAttributeValue as piiAttri5_235_, piilogged0_.piiUid as piiUid235_ from piiH piilogged0_ where piilogged0_.owner=1 order by piilogged0_.piiUid, date ASC
+121112 15:54:38	   85 Query	select piiuniquei0_.id as id228_, piiuniquei0_.uniqueId as uniqueId228_ from piiuniqueid piiuniquei0_ cross join PIITYPE piitype1_ where piiuniquei0_.id=piitype1_.HJID and piiuniquei0_.uniqueId=21352731547055389 and piitype1_.OWNER=1
+		   85 Query	select oeestatus0_.id as id227_, oeestatus0_.action_HJID as action4_227_, oeestatus0_.piiUniqueId_id as piiUniqu5_227_, oeestatus0_.trigger_HJID as trigger6_227_, oeestatus0_.triggerName as triggerN2_227_, oeestatus0_.triggeredOnce as triggere3_227_ from OEEStatus oeestatus0_ where oeestatus0_.piiUniqueId_id=2 and oeestatus0_.triggerName='{http://www.primelife.eu/ppl/obligation}TriggerPersonalDataDeleted'
+		   85 Query	select piiuniquei0_.id as id228_, piiuniquei0_.uniqueId as uniqueId228_ from piiuniqueid piiuniquei0_
+		   85 Query	SET autocommit=0
+		   85 Query	insert into EventH_ values ( )
+		   85 Query	insert into EventHDelete (id) values (8)
+		   85 Query	insert into piiH (date, event_id, owner, piiAttributeName, piiAttributeValue, piiUid) values (null, 8, 1, null, null, 21352731547055389)
+		   85 Query	commit
+		   85 Query	SET autocommit=1
+		   85 Query	select eventlogge0_.id as id229_0_ from EventHDelete eventlogge0_ inner join EventH_ eventlogge0_1_ on eventlogge0_.id=eventlogge0_1_.id where eventlogge0_.id=8
+		   85 Query	select piilogged0_.id as id235_1_, date as date235_1_, piilogged0_.event_id as event7_235_1_, piilogged0_.owner as owner235_1_, piilogged0_.piiAttributeName as piiAttri4_235_1_, piilogged0_.piiAttributeValue as piiAttri5_235_1_, piilogged0_.piiUid as piiUid235_1_, eventlogge1_.id as id229_0_, eventlogge1_3_.subject as subject232_0_, eventlogge1_5_.actionPerformed as actionPe1_234_0_, eventlogge1_5_.purpose as purpose234_0_, case when eventlogge1_1_.id is not null then 1 when eventlogge1_2_.id is not null then 2 when eventlogge1_3_.id is not null then 3 when eventlogge1_4_.id is not null then 4 when eventlogge1_5_.id is not null then 5 when eventlogge1_.id is not null then 0 end as clazz_0_ from piiH piilogged0_ left outer join EventH_ eventlogge1_ on piilogged0_.event_id=eventlogge1_.id left outer join EventHUpdate eventlogge1_1_ on eventlogge1_.id=eventlogge1_1_.id left outer join EventHCreate eventlogge1_2_ on eventlogge1_.id=eventlogge1_2_.id left outer join EventHDownstream eventlogge1_3_ on eventlogge1_.id=eventlogge1_3_.id left outer join EventHDelete eventlogge1_4_ on eventlogge1_.id=eventlogge1_4_.id left outer join EventHAccess eventlogge1_5_ on eventlogge1_.id=eventlogge1_5_.id where piilogged0_.id=8
+		   85 Query	select piiuniquei0_.id as id228_, piiuniquei0_.uniqueId as uniqueId228_ from piiuniqueid piiuniquei0_
+		   85 Query	select oeestatus0_.id as id227_, oeestatus0_.action_HJID as action4_227_, oeestatus0_.piiUniqueId_id as piiUniqu5_227_, oeestatus0_.trigger_HJID as trigger6_227_, oeestatus0_.triggerName as triggerN2_227_, oeestatus0_.triggeredOnce as triggere3_227_ from OEEStatus oeestatus0_ where oeestatus0_.piiUniqueId_id=2
+		   85 Query	SET autocommit=0
+		   85 Query	delete from OEEStatus where id=3
+		   85 Query	commit
+		   85 Query	SET autocommit=1
+		   85 Query	SET autocommit=0
+		   85 Query	delete from OEEStatus where id=4
+		   85 Query	commit
+		   85 Query	SET autocommit=1
+		   85 Query	select piiuniquei0_.id as id228_, piiuniquei0_.uniqueId as uniqueId228_ from piiuniqueid piiuniquei0_
+		   85 Query	SET autocommit=0
+		   85 Query	update PIITYPEPOLICYSETORPOLICYITEM set POLICYSETORPOLICYITEMS_PIITY_0=null where POLICYSETORPOLICYITEMS_PIITY_0=2
+		   85 Query	update AUTHORIZATIONSSETTYPEAUTHORI_0 set AUTHORIZATIONITEMS_AUTHORIZA_0=null where AUTHORIZATIONITEMS_AUTHORIZA_0=2
+		   85 Query	update AUTHORIZATIONTYPEANYITEM set ANYITEMS_AUTHORIZATIONTYPE_H_0=null where ANYITEMS_AUTHORIZATIONTYPE_H_0=2
+		   85 Query	update OBLIGATION set OBLIGATION_OBLIGATIONSSET_0__0=null where OBLIGATION_OBLIGATIONSSET_0__0=2
+		   85 Query	update TRIGGERSSETTRIGGERITEM set TRIGGERITEMS_TRIGGERSSET_HJID=null where TRIGGERITEMS_TRIGGERSSET_HJID=3
+		   85 Query	update TRIGGERSSETTRIGGERITEM set TRIGGERITEMS_TRIGGERSSET_HJID=null where TRIGGERITEMS_TRIGGERSSET_HJID=4
+		   85 Query	delete from PIITYPEPOLICYSETORPOLICYITEM where HJID=2
+		   85 Query	delete from POLICYTYPE_0 where HJID=2
+		   85 Query	delete from POLICYTYPE where HJID=2
+		   85 Query	delete from STICKYPOLICYTYPE where HJID=2
+		   85 Query	delete from COMMONDHPSPTYPE where HJID=2
+		   85 Query	delete from AUTHORIZATIONSSETTYPEAUTHORI_0 where HJID=2
+		   85 Query	delete from AUTHORIZATIONTYPEANYITEM where HJID=2
+		   85 Query	delete from AUTHZDOWNSTREAMUSAGE where HJID=2
+		   85 Query	delete from AUTHORIZATIONTYPE where HJID=2
+		   85 Query	delete from AUTHORIZATIONSSETTYPE where HJID=2
+		   85 Query	delete from OBLIGATION where HJID=3
+		   85 Query	delete from ACTIONDELETEPERSONALDATA where HJID=3
+		   85 Query	delete from ACTION_ where HJID=3
+		   85 Query	delete from TRIGGERSSETTRIGGERITEM where HJID=3
+		   85 Query	delete from TRIGGERATTIME where HJID=3
+		   85 Query	delete from TRIGGER_ where HJID=3
+		   85 Query	delete from DURATION where HJID=3
+		   85 Query	delete from DATEANDTIME where HJID=2
+		   85 Query	delete from TRIGGERSSET where HJID=3
+		   85 Query	delete from OBLIGATION where HJID=4
+		   85 Query	delete from ACTIONNOTIFYDATASUBJECT where HJID=4
+		   85 Query	delete from ACTION_ where HJID=4
+		   85 Query	delete from TRIGGERSSETTRIGGERITEM where HJID=4
+		   85 Query	delete from TRIGGERPERSONALDATASENT where HJID=4
+		   85 Query	delete from TRIGGER_ where HJID=4
+		   85 Query	delete from DURATION where HJID=4
+		   85 Query	delete from TRIGGERSSET where HJID=4
+		   85 Query	delete from OBLIGATIONSSET_0 where HJID=2
+		   85 Query	delete from PIITYPE where HJID=2
+		   85 Query	delete from piiuniqueid where id=2
+		   85 Query	commit
+		   85 Query	SET autocommit=1
+		   85 Query	select piilogged0_.id as id235_, date as date235_, piilogged0_.event_id as event7_235_, piilogged0_.owner as owner235_, piilogged0_.piiAttributeName as piiAttri4_235_, piilogged0_.piiAttributeValue as piiAttri5_235_, piilogged0_.piiUid as piiUid235_ from piiH piilogged0_ where piilogged0_.owner=1 order by piilogged0_.piiUid, date ASC
+121112 15:54:39	   85 Query	select piiuniquei0_.id as id228_, piiuniquei0_.uniqueId as uniqueId228_ from piiuniqueid piiuniquei0_ cross join PIITYPE piitype1_ where piiuniquei0_.id=piitype1_.HJID and piiuniquei0_.uniqueId=31352731547286591 and piitype1_.OWNER=1
+		   85 Query	select oeestatus0_.id as id227_, oeestatus0_.action_HJID as action4_227_, oeestatus0_.piiUniqueId_id as piiUniqu5_227_, oeestatus0_.trigger_HJID as trigger6_227_, oeestatus0_.triggerName as triggerN2_227_, oeestatus0_.triggeredOnce as triggere3_227_ from OEEStatus oeestatus0_ where oeestatus0_.piiUniqueId_id=3 and oeestatus0_.triggerName='{http://www.primelife.eu/ppl/obligation}TriggerPersonalDataDeleted'
+		   85 Query	select piiuniquei0_.id as id228_, piiuniquei0_.uniqueId as uniqueId228_ from piiuniqueid piiuniquei0_
+		   85 Query	SET autocommit=0
+		   85 Query	insert into EventH_ values ( )
+		   85 Query	insert into EventHDelete (id) values (9)
+		   85 Query	insert into piiH (date, event_id, owner, piiAttributeName, piiAttributeValue, piiUid) values (null, 9, 1, null, null, 31352731547286591)
+		   85 Query	commit
+		   85 Query	SET autocommit=1
+		   85 Query	select eventlogge0_.id as id229_0_ from EventHDelete eventlogge0_ inner join EventH_ eventlogge0_1_ on eventlogge0_.id=eventlogge0_1_.id where eventlogge0_.id=9
+		   85 Query	select piilogged0_.id as id235_1_, date as date235_1_, piilogged0_.event_id as event7_235_1_, piilogged0_.owner as owner235_1_, piilogged0_.piiAttributeName as piiAttri4_235_1_, piilogged0_.piiAttributeValue as piiAttri5_235_1_, piilogged0_.piiUid as piiUid235_1_, eventlogge1_.id as id229_0_, eventlogge1_3_.subject as subject232_0_, eventlogge1_5_.actionPerformed as actionPe1_234_0_, eventlogge1_5_.purpose as purpose234_0_, case when eventlogge1_1_.id is not null then 1 when eventlogge1_2_.id is not null then 2 when eventlogge1_3_.id is not null then 3 when eventlogge1_4_.id is not null then 4 when eventlogge1_5_.id is not null then 5 when eventlogge1_.id is not null then 0 end as clazz_0_ from piiH piilogged0_ left outer join EventH_ eventlogge1_ on piilogged0_.event_id=eventlogge1_.id left outer join EventHUpdate eventlogge1_1_ on eventlogge1_.id=eventlogge1_1_.id left outer join EventHCreate eventlogge1_2_ on eventlogge1_.id=eventlogge1_2_.id left outer join EventHDownstream eventlogge1_3_ on eventlogge1_.id=eventlogge1_3_.id left outer join EventHDelete eventlogge1_4_ on eventlogge1_.id=eventlogge1_4_.id left outer join EventHAccess eventlogge1_5_ on eventlogge1_.id=eventlogge1_5_.id where piilogged0_.id=9
+		   85 Query	select piiuniquei0_.id as id228_, piiuniquei0_.uniqueId as uniqueId228_ from piiuniqueid piiuniquei0_
+		   85 Query	select oeestatus0_.id as id227_, oeestatus0_.action_HJID as action4_227_, oeestatus0_.piiUniqueId_id as piiUniqu5_227_, oeestatus0_.trigger_HJID as trigger6_227_, oeestatus0_.triggerName as triggerN2_227_, oeestatus0_.triggeredOnce as triggere3_227_ from OEEStatus oeestatus0_ where oeestatus0_.piiUniqueId_id=3
+		   85 Query	SET autocommit=0
+		   85 Query	delete from OEEStatus where id=5
+		   85 Query	commit
+		   85 Query	SET autocommit=1
+		   85 Query	SET autocommit=0
+		   85 Query	delete from OEEStatus where id=6
+		   85 Query	commit
+		   85 Query	SET autocommit=1
+		   85 Query	select piiuniquei0_.id as id228_, piiuniquei0_.uniqueId as uniqueId228_ from piiuniqueid piiuniquei0_
+		   85 Query	SET autocommit=0
+		   85 Query	update PIITYPEPOLICYSETORPOLICYITEM set POLICYSETORPOLICYITEMS_PIITY_0=null where POLICYSETORPOLICYITEMS_PIITY_0=3
+		   85 Query	update AUTHORIZATIONSSETTYPEAUTHORI_0 set AUTHORIZATIONITEMS_AUTHORIZA_0=null where AUTHORIZATIONITEMS_AUTHORIZA_0=3
+		   85 Query	update AUTHORIZATIONTYPEANYITEM set ANYITEMS_AUTHORIZATIONTYPE_H_0=null where ANYITEMS_AUTHORIZATIONTYPE_H_0=3
+		   85 Query	update OBLIGATION set OBLIGATION_OBLIGATIONSSET_0__0=null where OBLIGATION_OBLIGATIONSSET_0__0=3
+		   85 Query	update TRIGGERSSETTRIGGERITEM set TRIGGERITEMS_TRIGGERSSET_HJID=null where TRIGGERITEMS_TRIGGERSSET_HJID=5
+		   85 Query	update TRIGGERSSETTRIGGERITEM set TRIGGERITEMS_TRIGGERSSET_HJID=null where TRIGGERITEMS_TRIGGERSSET_HJID=6
+		   85 Query	delete from PIITYPEPOLICYSETORPOLICYITEM where HJID=3
+		   85 Query	delete from POLICYTYPE_0 where HJID=3
+		   85 Query	delete from POLICYTYPE where HJID=3
+		   85 Query	delete from STICKYPOLICYTYPE where HJID=3
+		   85 Query	delete from COMMONDHPSPTYPE where HJID=3
+		   85 Query	delete from AUTHORIZATIONSSETTYPEAUTHORI_0 where HJID=3
+		   85 Query	delete from AUTHORIZATIONTYPEANYITEM where HJID=3
+		   85 Query	delete from AUTHZDOWNSTREAMUSAGE where HJID=3
+		   85 Query	delete from AUTHORIZATIONTYPE where HJID=3
+		   85 Query	delete from AUTHORIZATIONSSETTYPE where HJID=3
+		   85 Query	delete from OBLIGATION where HJID=5
+		   85 Query	delete from ACTIONDELETEPERSONALDATA where HJID=5
+		   85 Query	delete from ACTION_ where HJID=5
+		   85 Query	delete from TRIGGERSSETTRIGGERITEM where HJID=5
+		   85 Query	delete from TRIGGERATTIME where HJID=5
+		   85 Query	delete from TRIGGER_ where HJID=5
+		   85 Query	delete from DURATION where HJID=5
+		   85 Query	delete from DATEANDTIME where HJID=3
+		   85 Query	delete from TRIGGERSSET where HJID=5
+		   85 Query	delete from OBLIGATION where HJID=6
+		   85 Query	delete from ACTIONNOTIFYDATASUBJECT where HJID=6
+		   85 Query	delete from ACTION_ where HJID=6
+		   85 Query	delete from TRIGGERSSETTRIGGERITEM where HJID=6
+		   85 Query	delete from TRIGGERPERSONALDATASENT where HJID=6
+		   85 Query	delete from TRIGGER_ where HJID=6
+		   85 Query	delete from DURATION where HJID=6
+		   85 Query	delete from TRIGGERSSET where HJID=6
+		   85 Query	delete from OBLIGATIONSSET_0 where HJID=3
+		   85 Query	delete from PIITYPE where HJID=3
+		   85 Query	delete from piiuniqueid where id=3
+		   85 Query	commit
+		   85 Query	SET autocommit=1
+		   85 Query	select piilogged0_.id as id235_, date as date235_, piilogged0_.event_id as event7_235_, piilogged0_.owner as owner235_, piilogged0_.piiAttributeName as piiAttri4_235_, piilogged0_.piiAttributeValue as piiAttri5_235_, piilogged0_.piiUid as piiUid235_ from piiH piilogged0_ where piilogged0_.owner=1 order by piilogged0_.piiUid, date ASC
