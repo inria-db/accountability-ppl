@@ -1,0 +1,99 @@
+ 121112 15:58:30	   85 Query	SET autocommit=0
+		   85 Query	insert into PIITYPE (ATTRIBUTENAME, ATTRIBUTEVALUE, CREATIONDATEITEM, MODIFICATIONDATEITEM, OWNER) values ('Koala.jpg', 'b79962e7-5467-42ca-bda6-0c6603f7d1c0_Koala.jpg', null, null, 1)
+		   85 Query	insert into AUTHORIZATIONSSETTYPE (MATCHING, MISMATCHIDOBJECT) values (1, null)
+		   85 Query	insert into AUTHORIZATIONTYPE (MATCHING, MISMATCHIDOBJECT) values (1, null)
+		   85 Query	insert into AUTHZDOWNSTREAMUSAGE (ALLOWED, HJID) values ('true', 4)
+		   85 Query	insert into AUTHORIZATIONTYPEANYITEM (ITEMELEMENT, ITEMOBJECT) values (null, '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><ns3:Policy PolicyId="policy-c6294ad9-3080-4af2-bab0-9830cc412793" RuleCombiningAlgId="urn:oasis:names:tc:xacml:1.0:rule-combining-algorithm:permit-overrides" xmlns="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:ns9="http://www.primelife.eu/ppl/stickypolicy" xmlns:ns5="http://www.primelife.eu/ppl" xmlns:ns12="urn:oasis:names:tc:xacml:2.0:context:schema:os" xmlns:ns6="http://www.primelife.eu/ppl/obligation" xmlns:ns13="http://www.primelife.eu/ppl/pii" xmlns:ns7="http://www.primelife.eu/ppl/authorization/mismatch" xmlns:ns10="http://www.w3.org/2001/04/xmlenc#" xmlns:ns8="http://www.primelife.eu/ppl/obligation/mismatch" xmlns:ns11="http://www.w3.org/2000/09/xmldsig#" xmlns:ns2="http://www.primelife.eu/ppl/claims" xmlns:ns4="http://www.primelife.eu/ppl/credential" xmlns:ns3="urn:oasis:names:tc:xacml:2.0:policy:schema:os"><ns3:Target><ns3:Subjects><ns3:Subject><ns3:SubjectMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal"><ns3:AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">toto@sap.com</ns3:AttributeValue><ns3:SubjectAttributeDesignator AttributeId="http://www.primelife.eu/ppl/email" DataType="http://www.w3.org/2001/XMLSchema#string"/></ns3:SubjectMatch></ns3:Subject></ns3:Subjects><ns3:Resources><ns3:Resource><ns3:ResourceMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal"><ns3:AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">Koala.jpg</ns3:AttributeValue><ns3:ResourceAttributeDesignator AttributeId="http://www.primelife.eu/ppl/fileName" DataType="http://www.w3.org/2001/XMLSchema#string"/></ns3:ResourceMatch></ns3:Resource></ns3:Resources><ns3:Actions><ns3:Action><ns3:ActionMatch MatchId="urn:oasis:names:tc:xacml:1.0:function:string-equal"><ns3:AttributeValue DataType="http://www.w3.org/2001/XMLSchema#string">read</ns3:AttributeValue><ns3:ActionAttributeDesignator AttributeId="urn:oasis:names:tc:xacml:1.0:action:action-id" DataType="http://www.w3.org/2001/XMLSchema#string"/></ns3:ActionMatch></ns3:Action></ns3:Actions></ns3:Target><ns3:Rule RuleId="rule-77c9f7c9-6f8a-47df-9991-c36f386640ac" Effect="Permit"/></ns3:Policy>')
+		   85 Query	insert into AUTHORIZATIONSSETTYPEAUTHORI_0 (ITEMNAME, ITEMVALUE_AUTHORIZATIONSSETT_0) values ('{http://www.primelife.eu/ppl}AuthzDownstreamUsage', 4)
+		   85 Query	insert into OBLIGATIONSSET_0 (ELEMENTID, INFINIT, MATCHING, MISMATCHID) values (null, 0, 1, null)
+		   85 Query	insert into ACTION_ (ELEMENTID, MATCHING, MISMATCHID, NAME_) values (null, 1, null, null)
+		   85 Query	insert into ACTIONDELETEPERSONALDATA (HJID) values (7)
+		   85 Query	insert into TRIGGERSSET (ELEMENTID, MATCHING, MISMATCHID, NAME_) values (null, 1, null, null)
+		   85 Query	insert into DURATION (DURATION, ELEMENTID, MATCHING, MISMATCHID) values ('P0Y0M0DT0H3M0S', null, 1, null)
+		   85 Query	insert into DATEANDTIME (DATEANDTIMEITEM, ELEMENTID, MATCHING, MISMATCHID, STARTNOWOBJECT) values (null, null, 1, null, '<?xml version="1.0" encoding="UTF-8"?><ns2:StartNow xmlns:ns2="http://www.primelife.eu/ppl/obligation" xmlns="http://www.primelife.eu/ppl" xmlns:ns3="http://www.primelife.eu/ppl/authorization/mismatch" xmlns:ns4="http://www.primelife.eu/ppl/obligation/mismatch" xmlns:ns5="http://www.primelife.eu/ppl/stickypolicy" xmlns:ns6="urn:oasis:names:tc:xacml:2.0:policy:schema:os" xmlns:ns7="http://www.primelife.eu/ppl/credential"/>')
+		   85 Query	insert into TRIGGER_ (ELEMENTID, MATCHING, MISMATCHID, NAME_) values (null, 1, null, null)
+		   85 Query	insert into TRIGGERATTIME (MAXDELAY_TRIGGERATTIME_HJID, START__TRIGGERATTIME_HJID, HJID) values (7, 4, 7)
+		   85 Query	insert into TRIGGERSSETTRIGGERITEM (ITEMNAME, ITEMVALUE_TRIGGERSSETTRIGGER_0) values ('{http://www.primelife.eu/ppl/obligation}TriggerAtTime', 7)
+		   85 Query	insert into OBLIGATION (ACTIONNAME, ACTIONVALUE_OBLIGATION_HJID, ELEMENTID, MATCHING, MISMATCHID, TRIGGERSSET_OBLIGATION_HJID) values ('{http://www.primelife.eu/ppl/obligation}ActionDeletePersonalData', 7, null, 1, null, 7)
+		   85 Query	insert into COMMONDHPSPTYPE (AUTHORIZATIONSSET_COMMONDHPS_0, OBLIGATIONSSET_COMMONDHPSPTY_0) values (4, 4)
+		   85 Query	insert into STICKYPOLICYTYPE (HJID) values (4)
+		   85 Query	insert into POLICYTYPE (DESCRIPTION, OBLIGATIONS_POLICYTYPE_HJID, POLICYDEFAULTS_POLICYTYPE_HJ_0, POLICYID, RULECOMBININGALGID, TARGET_POLICYTYPE_HJID, VERSION_) values (null, null, null, null, null, null, '1.0')
+		   85 Query	insert into POLICYTYPE_0 (CREDENTIALREQUIREMENTS_POLIC_1, DATAHANDLINGPREFERENCES_POLI_1, PROVISIONALACTIONS_POLICYTYP_0, STICKYPOLICY_POLICYTYPE_0_HJ_0, HJID) values (null, null, null, 4, 4)
+		   85 Query	insert into PIITYPEPOLICYSETORPOLICYITEM (ITEMPOLICY_PIITYPEPOLICYSETO_0, ITEMPOLICYSET_PIITYPEPOLICYS_0) values (4, null)
+		   85 Query	update PIITYPEPOLICYSETORPOLICYITEM set POLICYSETORPOLICYITEMS_PIITY_0=4 where HJID=4
+		   85 Query	update AUTHORIZATIONSSETTYPEAUTHORI_0 set AUTHORIZATIONITEMS_AUTHORIZA_0=4 where HJID=4
+		   85 Query	update AUTHORIZATIONTYPEANYITEM set ANYITEMS_AUTHORIZATIONTYPE_H_0=4 where HJID=4
+		   85 Query	update OBLIGATION set OBLIGATION_OBLIGATIONSSET_0__0=4 where HJID=7
+		   85 Query	update TRIGGERSSETTRIGGERITEM set TRIGGERITEMS_TRIGGERSSET_HJID=7 where HJID=7
+		   85 Query	commit
+		   85 Query	SET autocommit=1
+		   85 Query	select piiuniquei0_.id as id228_, piiuniquei0_.uniqueId as uniqueId228_ from piiuniqueid piiuniquei0_
+		   85 Query	select piiuniquei0_.id as id228_, piiuniquei0_.uniqueId as uniqueId228_ from piiuniqueid piiuniquei0_ where piiuniquei0_.uniqueId=41352732310979126
+		   85 Query	SET autocommit=0
+		   85 Query	insert into piiuniqueid (uniqueId, id) values (41352732310979126, 4)
+		   85 Query	commit
+		   85 Query	SET autocommit=1
+		   85 Query	SET autocommit=0
+		   85 Query	insert into OEEStatus (action_HJID, piiUniqueId_id, trigger_HJID, triggerName, triggeredOnce) values (7, 4, 7, '{http://www.primelife.eu/ppl/obligation}TriggerAtTime', 0)
+121112 15:58:31	   85 Query	commit
+		   85 Query	SET autocommit=1
+		   85 Query	select piiuniquei0_.id as id228_, piiuniquei0_.uniqueId as uniqueId228_ from piiuniqueid piiuniquei0_
+		   85 Query	SET autocommit=0
+		   85 Query	insert into EventH_ values ( )
+		   85 Query	insert into EventHCreate (id) values (10)
+		   85 Query	insert into piiH (date, event_id, owner, piiAttributeName, piiAttributeValue, piiUid) values (null, 10, 1, 'Koala.jpg', 'b79962e7-5467-42ca-bda6-0c6603f7d1c0_Koala.jpg', 41352732310979126)
+		   85 Query	update DATEANDTIME set DATEANDTIMEITEM='2012-11-12 15:58:31', ELEMENTID=null, MATCHING=1, MISMATCHID=null, STARTNOWOBJECT=null where HJID=4
+		   85 Query	commit
+		   85 Query	SET autocommit=1
+		   85 Query	select eventlogge0_.id as id229_0_ from EventHCreate eventlogge0_ inner join EventH_ eventlogge0_1_ on eventlogge0_.id=eventlogge0_1_.id where eventlogge0_.id=10
+		   85 Query	select piilogged0_.id as id235_1_, date as date235_1_, piilogged0_.event_id as event7_235_1_, piilogged0_.owner as owner235_1_, piilogged0_.piiAttributeName as piiAttri4_235_1_, piilogged0_.piiAttributeValue as piiAttri5_235_1_, piilogged0_.piiUid as piiUid235_1_, eventlogge1_.id as id229_0_, eventlogge1_3_.subject as subject232_0_, eventlogge1_5_.actionPerformed as actionPe1_234_0_, eventlogge1_5_.purpose as purpose234_0_, case when eventlogge1_1_.id is not null then 1 when eventlogge1_2_.id is not null then 2 when eventlogge1_3_.id is not null then 3 when eventlogge1_4_.id is not null then 4 when eventlogge1_5_.id is not null then 5 when eventlogge1_.id is not null then 0 end as clazz_0_ from piiH piilogged0_ left outer join EventH_ eventlogge1_ on piilogged0_.event_id=eventlogge1_.id left outer join EventHUpdate eventlogge1_1_ on eventlogge1_.id=eventlogge1_1_.id left outer join EventHCreate eventlogge1_2_ on eventlogge1_.id=eventlogge1_2_.id left outer join EventHDownstream eventlogge1_3_ on eventlogge1_.id=eventlogge1_3_.id left outer join EventHDelete eventlogge1_4_ on eventlogge1_.id=eventlogge1_4_.id left outer join EventHAccess eventlogge1_5_ on eventlogge1_.id=eventlogge1_5_.id where piilogged0_.id=10
+		   85 Query	select piiuniquei0_.id as id228_, piiuniquei0_.uniqueId as uniqueId228_ from piiuniqueid piiuniquei0_
+121112 16:01:31	   85 Query	select oeestatus0_.id as id227_, oeestatus0_.action_HJID as action4_227_, oeestatus0_.piiUniqueId_id as piiUniqu5_227_, oeestatus0_.trigger_HJID as trigger6_227_, oeestatus0_.triggerName as triggerN2_227_, oeestatus0_.triggeredOnce as triggere3_227_ from OEEStatus oeestatus0_ where oeestatus0_.piiUniqueId_id=4 and oeestatus0_.triggerName='{http://www.primelife.eu/ppl/obligation}TriggerAtTime'
+		   85 Query	select oeestatus0_.id as id227_, oeestatus0_.action_HJID as action4_227_, oeestatus0_.piiUniqueId_id as piiUniqu5_227_, oeestatus0_.trigger_HJID as trigger6_227_, oeestatus0_.triggerName as triggerN2_227_, oeestatus0_.triggeredOnce as triggere3_227_ from OEEStatus oeestatus0_ where oeestatus0_.piiUniqueId_id=4 and oeestatus0_.triggerName='{http://www.primelife.eu/ppl/obligation}TriggerAtTime'
+		   85 Query	select piiuniquei0_.id as id228_, piiuniquei0_.uniqueId as uniqueId228_ from piiuniqueid piiuniquei0_ where piiuniquei0_.uniqueId=41352732310979126
+		   85 Query	select piiuniquei0_.id as id228_, piiuniquei0_.uniqueId as uniqueId228_ from piiuniqueid piiuniquei0_
+		   85 Query	SET autocommit=0
+		   85 Query	insert into EventH_ values ( )
+		   85 Query	insert into EventHDelete (id) values (11)
+		   85 Query	insert into piiH (date, event_id, owner, piiAttributeName, piiAttributeValue, piiUid) values (null, 11, 1, null, null, 41352732310979126)
+		   85 Query	update OEEStatus set action_HJID=7, piiUniqueId_id=4, trigger_HJID=7, triggerName='{http://www.primelife.eu/ppl/obligation}TriggerAtTime', triggeredOnce=1 where id=7
+		   85 Query	commit
+		   85 Query	SET autocommit=1
+		   85 Query	select eventlogge0_.id as id229_0_ from EventHDelete eventlogge0_ inner join EventH_ eventlogge0_1_ on eventlogge0_.id=eventlogge0_1_.id where eventlogge0_.id=11
+		   85 Query	select piilogged0_.id as id235_1_, date as date235_1_, piilogged0_.event_id as event7_235_1_, piilogged0_.owner as owner235_1_, piilogged0_.piiAttributeName as piiAttri4_235_1_, piilogged0_.piiAttributeValue as piiAttri5_235_1_, piilogged0_.piiUid as piiUid235_1_, eventlogge1_.id as id229_0_, eventlogge1_3_.subject as subject232_0_, eventlogge1_5_.actionPerformed as actionPe1_234_0_, eventlogge1_5_.purpose as purpose234_0_, case when eventlogge1_1_.id is not null then 1 when eventlogge1_2_.id is not null then 2 when eventlogge1_3_.id is not null then 3 when eventlogge1_4_.id is not null then 4 when eventlogge1_5_.id is not null then 5 when eventlogge1_.id is not null then 0 end as clazz_0_ from piiH piilogged0_ left outer join EventH_ eventlogge1_ on piilogged0_.event_id=eventlogge1_.id left outer join EventHUpdate eventlogge1_1_ on eventlogge1_.id=eventlogge1_1_.id left outer join EventHCreate eventlogge1_2_ on eventlogge1_.id=eventlogge1_2_.id left outer join EventHDownstream eventlogge1_3_ on eventlogge1_.id=eventlogge1_3_.id left outer join EventHDelete eventlogge1_4_ on eventlogge1_.id=eventlogge1_4_.id left outer join EventHAccess eventlogge1_5_ on eventlogge1_.id=eventlogge1_5_.id where piilogged0_.id=11
+		   85 Query	select piiuniquei0_.id as id228_, piiuniquei0_.uniqueId as uniqueId228_ from piiuniqueid piiuniquei0_
+		   85 Query	select oeestatus0_.id as id227_, oeestatus0_.action_HJID as action4_227_, oeestatus0_.piiUniqueId_id as piiUniqu5_227_, oeestatus0_.trigger_HJID as trigger6_227_, oeestatus0_.triggerName as triggerN2_227_, oeestatus0_.triggeredOnce as triggere3_227_ from OEEStatus oeestatus0_ where oeestatus0_.piiUniqueId_id=4
+		   85 Query	SET autocommit=0
+		   85 Query	delete from OEEStatus where id=7
+		   85 Query	commit
+		   85 Query	SET autocommit=1
+		   85 Query	SET autocommit=0
+		   85 Query	update PIITYPEPOLICYSETORPOLICYITEM set POLICYSETORPOLICYITEMS_PIITY_0=null where POLICYSETORPOLICYITEMS_PIITY_0=4
+		   85 Query	update AUTHORIZATIONSSETTYPEAUTHORI_0 set AUTHORIZATIONITEMS_AUTHORIZA_0=null where AUTHORIZATIONITEMS_AUTHORIZA_0=4
+		   85 Query	update AUTHORIZATIONTYPEANYITEM set ANYITEMS_AUTHORIZATIONTYPE_H_0=null where ANYITEMS_AUTHORIZATIONTYPE_H_0=4
+		   85 Query	update OBLIGATION set OBLIGATION_OBLIGATIONSSET_0__0=null where OBLIGATION_OBLIGATIONSSET_0__0=4
+		   85 Query	update TRIGGERSSETTRIGGERITEM set TRIGGERITEMS_TRIGGERSSET_HJID=null where TRIGGERITEMS_TRIGGERSSET_HJID=7
+		   85 Query	delete from PIITYPEPOLICYSETORPOLICYITEM where HJID=4
+		   85 Query	delete from POLICYTYPE_0 where HJID=4
+		   85 Query	delete from POLICYTYPE where HJID=4
+		   85 Query	delete from STICKYPOLICYTYPE where HJID=4
+		   85 Query	delete from COMMONDHPSPTYPE where HJID=4
+		   85 Query	delete from AUTHORIZATIONSSETTYPEAUTHORI_0 where HJID=4
+		   85 Query	delete from AUTHORIZATIONTYPEANYITEM where HJID=4
+		   85 Query	delete from AUTHZDOWNSTREAMUSAGE where HJID=4
+		   85 Query	delete from AUTHORIZATIONTYPE where HJID=4
+		   85 Query	delete from AUTHORIZATIONSSETTYPE where HJID=4
+		   85 Query	delete from OBLIGATION where HJID=7
+		   85 Query	delete from ACTIONDELETEPERSONALDATA where HJID=7
+		   85 Query	delete from ACTION_ where HJID=7
+		   85 Query	delete from TRIGGERSSETTRIGGERITEM where HJID=7
+		   85 Query	delete from TRIGGERATTIME where HJID=7
+		   85 Query	delete from TRIGGER_ where HJID=7
+		   85 Query	delete from DURATION where HJID=7
+		   85 Query	delete from DATEANDTIME where HJID=4
+		   85 Query	delete from TRIGGERSSET where HJID=7
+		   85 Query	delete from OBLIGATIONSSET_0 where HJID=4
+		   85 Query	delete from PIITYPE where HJID=4
+		   85 Query	delete from piiuniqueid where id=4
+		   85 Query	commit
+		   85 Query	SET autocommit=1
